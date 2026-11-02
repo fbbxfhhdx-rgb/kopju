@@ -67,12 +67,14 @@ class _HomeShell extends ConsumerWidget {
       appSettingProvider.select((state) => state.floatingNavigationBar),
     );
     return Material(
-      color: SurfaceLevel.page.colorOf(context.colorScheme),
+      color: SurfaceLevel.page.colorOf(context.colorScheme).withValues（alpha: 0.6)，
       child: Column(
         children: [
           Expanded(
             child: Stack(
-              children: [
+              children: [Positioned.fill(
+                  child: Image.asset('assets/images/bg.jpg', fit: BoxFit.cover),
+                ),
                 Positioned.fill(
                   child: FocusTraversalGroup(
                     policy: PageTraversalPolicy(),
