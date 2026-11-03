@@ -22,12 +22,12 @@ class DashboardColors {
 
   factory DashboardColors.of(BuildContext context) {
     final colorScheme = context.colorScheme;
-    final card = SurfaceLevel.card.colorOf(colorScheme);
+    final card = SurfaceLevel.card.colorOf(colorScheme).withValues(alpha: 0);
     return DashboardColors._(
       page: SurfaceLevel.page.colorOf(colorScheme),
       card: card,
-      tone: SurfaceLevel.block.colorOf(colorScheme),
-      tone2: SurfaceLevel.inset.colorOf(colorScheme),
+      tone: SurfaceLevel.block.colorOf(colorScheme).withValues(alpha: 0),
+      tone2: SurfaceLevel.inset.colorOf(colorScheme).withValues(alpha: 0),
       track: colorScheme.surfaceContainerHighest,
       thumb: colorScheme.outline,
       series2: Color.alphaBlend(
