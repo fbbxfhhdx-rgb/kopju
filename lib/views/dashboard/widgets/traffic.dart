@@ -224,6 +224,16 @@ class NetworkSpeedCard extends ConsumerWidget {
                 ),
             ],
           ),
+         const SizedBox(height: 12),
+          InkWell(
+            onTap: () {
+              dialogs.openUrl('https://speed.cloudflare.com');
+            },
+            child: const Text(
+              '在线测速',
+              style: TextStyle(decoration: TextDecoration.underline),
+            ),
+          ), 
         ],
       ),
     );
